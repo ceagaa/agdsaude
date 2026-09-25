@@ -1,0 +1,15 @@
+export { Header } from "./Header";
+export { HeroSection } from "./HeroSection";
+export { LogoMarqueeSection } from "./LogoMarqueeSection";
+export { PromiseSection } from "./PromiseSection";
+export { AboutSection } from "./AboutSection";
+export { ChooseSection } from "./ChooseSection";
+export { ServicesSection } from "./ServicesSection";
+export { ProcessSection } from "./ProcessSection";
+export { GallerySection } from "./GallerySection";
+export { TeamSection } from "./TeamSection";
+export { TestimonialsSection } from "./TestimonialsSection";
+export { PrinciplesSection } from "./PrinciplesSection";
+export { BlogSection } from "./BlogSection";
+export { CtaSection } from "./CtaSection";
+export { Footer } from "./Footer";
