@@ -1,25 +1,241 @@
 /**
- * Content + types for the seniornest.webflow.io clone (route "/" ).
- * All copy is transcribed from the source site — do not invent new text.
+ * Content for the AGD Saúde landing page (route "/").
+ * Copy target keyword: "Acompanhamento hospitalar em São Paulo".
+ *
+ * NOTE: phone / whatsapp / e-mail below are placeholders — replace
+ * them with the real AGD contact channels before publishing.
  */
 
 export type NavItem = { label: string; href: string };
 
+export const CONTACT = {
+  phoneLabel: "(11) 98765-4321",
+  phoneHref: "tel:+5511987654321",
+  email: "contato@agdsaude.com.br",
+  whatsapp:
+    "https://wa.me/5511987654321?text=Ol%C3%A1!%20Preciso%20de%20acompanhamento%20hospitalar%20em%20S%C3%A3o%20Paulo.",
+  region: "Atendemos toda a Grande São Paulo",
+};
+
 export const NAV: { links: NavItem[] } = {
   links: [
-    { label: "Home", href: "/" },
-    { label: "About Us", href: "#about" },
-    { label: "Services", href: "#services" },
-    { label: "Contact", href: "#contact" },
+    { label: "Início", href: "/" },
+    { label: "Sobre", href: "#about" },
+    { label: "Serviços", href: "#services" },
+    { label: "Depoimentos", href: "#depoimentos" },
+    { label: "Contato", href: "#contact" },
   ],
 };
 
 export const HERO = {
-  badge: "The future of AI in behavioral health",
-  title: "Senior Care You Can Trust",
-  body: "We empower individuals, families, and businesses with tailored financial strategies that grow wealth.",
-  cta: { label: "Book a Services", href: "#services" },
+  badge: "Plantões 24/7 · Enfermeiros e Auxiliares · Desde 2001",
+  title: "Acompanhamento hospitalar em São Paulo com cuidado de verdade",
+  body: "Assistência humanizada e contínua, com plantões de 24 horas por dia: um profissional de confiança ao lado do seu ente querido em hospitais e clínicas de São Paulo e da Grande SP, com relatório diário para a família.",
+  cta: { label: "Falar no WhatsApp agora", href: CONTACT.whatsapp },
+  ctaSecondary: { label: "Ver como funciona", href: "#services" },
 };
+
+export const STATS = {
+  title: "AGD Saúde em números",
+  items: [
+    { value: "50", suffix: "+", label: "Atendimentos por mês", hint: "Contínuo, todo mês" },
+    { value: "45", suffix: "+", label: "Profissionais capacitados", hint: "Equipe técnica verificada" },
+    { value: "20", suffix: "+", label: "Anos de experiência", hint: "Tradição que tranquiliza" },
+    { value: "100", suffix: "%", label: "de aprovação", hint: "Famílias que indicam" },
+  ] as const,
+};
+
+export const ABOUT = {
+  tag: "// Sobre a AGD Saúde",
+  title: "Cuidando de vidas em São Paulo com confiança e tradição desde 2001",
+  body: "A AGD Saúde é uma empresa de home care paulistana que há mais de 20 anos acompanha pacientes em hospitais, clínicas e residências em toda a Grande São Paulo. Nosso compromisso é preservar a dignidade, o conforto e a segurança de cada paciente — e dar tranquilidade real a quem ama.",
+  bannerBody: "Presença de verdade, escala cumprida e cuidado humano do primeiro ao último minuto.",
+  bullets: [
+    "Escalas 24x7, com substituição garantida em até 2 horas",
+    "Pontualidade confirmada por WhatsApp antes de cada plantão",
+    "Profissionais registrados, verificados e supervisionados",
+    "Plano de cuidado individualizado para cada paciente",
+  ],
+  cta: { label: "Falar com um especialista", href: CONTACT.whatsapp },
+};
+
+export const SERVICES = {
+  tag: "// Serviços em destaque",
+  title: "Serviços de cuidado profissional em hospitais e residências de São Paulo",
+  body: "Do plantão hospitalar ao apoio em casa e nas consultas: a AGD Saúde cobre cada fase do cuidado com a mesma exigência técnica e o mesmo acolhimento.",
+  items: [
+    {
+      title: "Acompanhamento Hospitalar",
+      body: "O que inclui o acompanhamento hospitalar em São Paulo da AGD Saúde: higiene e conforto no leito, controle de sinais vitais, apoio em exames e procedimentos, administração de medicamentos conforme prescrição, intermediação com a equipe médica e relatório diário para a família. Atuamos em hospitais públicos, particulares e conveniados, em regime diurno, noturno ou de 24 horas.",
+      bullets: [
+        "Escala diurna, noturna ou 24h",
+        "Enfermeiro ou auxiliar dedicado",
+        "Relatório diário para a família",
+      ],
+      cta: { label: "Quero um acompanhante", href: CONTACT.whatsapp },
+      image: "serviceImage1",
+    },
+    {
+      title: "Cuidados em Residência",
+      body: "Enfermeiros e auxiliares de enfermagem em domicílio para pós-cirúrgicos, recuperação, idosos e pacientes crônicos — com plano de cuidado em casa, administração de medicamentos, curativos, higiene, alimentação e avaliação clínica periódica.",
+      bullets: [
+        "Pós-cirúrgico e recuperação",
+        "Idosos e pacientes crônicos",
+        "Avaliação clínica periódica",
+      ],
+      cta: { label: "Cotar cuidados em casa", href: CONTACT.whatsapp },
+      image: "serviceImage2",
+    },
+    {
+      title: "Acompanhamento em Consultas e Exames",
+      body: "O acompanhamento residencial começa na porta de casa: deslocamento ida e volta, apoio na triagem, anotação das orientações médicas, exames laboratoriais e de imagem, retirada de resultados e recado completo para a família — sem fila e sem ansiedade.",
+      bullets: [
+        "Deslocamento ida e volta",
+        "Apoio em exames e consultas",
+        "Recado médico para a família",
+      ],
+      cta: { label: "Agendar acompanhamento", href: CONTACT.whatsapp },
+      image: "serviceImage3",
+    },
+  ] as const,
+};
+
+export const PRINCIPLES = {
+  tag: "// Procedimentos",
+  title: "Todos os procedimentos que nossa equipe executa",
+  body: "Técnicas de enfermagem executadas por profissionais com registro ativo e supervisão técnica — no hospital ou na sua casa.",
+  items: [
+    {
+      title: "Curativos e cuidados com feridas",
+      body: "Curativos simples, complexos e atraumáticos, com avaliação periódica da lesão, controle de sinais de infecção e troca conforme protocolo médico.",
+    },
+    {
+      title: "Banho no leito e higiene conforto",
+      body: "Banho completo no leito com técnica de rotação segura, higienização de cavidades, prevenção de escara e conforto do paciente em cada etapa.",
+    },
+    {
+      title: "Administração de medicamentos EV e IM",
+      body: "Aplicação endovenosa e intramuscular, incluindo antibióticos, sempre conforme prescrição, com registro da dose, do horário e da via utilizada.",
+    },
+    {
+      title: "Cuidados paliativos e de conforto",
+      body: "Controle de dor, higiene, decúbito, hidratação e presença contínua, com acolhimento também para a família em cada fase do cuidado.",
+    },
+    {
+      title: "Controle de sinais vitais e glicemia",
+      body: "Aferição de PA, FC, FR, temperatura e glicemia capilar, com registro em prontuário e alerta imediato ao enfermeiro responsável.",
+    },
+    {
+      title: "Mobilização e transferência de leito",
+      body: "Mudanças de decúbito, transferência para cadeira e deambulação assistida, com foco na prevenção de contracturas e úlceras por pressão.",
+    },
+    {
+      title: "Alimentação assistida e deglutição",
+      body: "Administração de dietas orais e enterais, identificação precoce de sinais de broncoaspiração e apoio ao acompanhamento nutricional.",
+    },
+    {
+      title: "Acompanhamento em quimioterapia",
+      body: "Presença durante sessões de longa duração, apoio emocional ao paciente e comunicação clara com a equipe oncológica e a família.",
+    },
+  ] as const,
+};
+
+export const PROCESS = {
+  tag: "// Por que nos escolher",
+  title: "O diferencial humano e técnico da equipe AGD",
+  items: [
+    {
+      chip: "✓ COREN ativo",
+      title: "Enfermeiros e auxiliares qualificados",
+      body: "Profissionais com registro ativo, treinamento interno em cuidados hospitalares e supervisão técnica contínua de um enfermeiro responsável.",
+    },
+    {
+      chip: "✓ 45+ em escala",
+      title: "Equipe sempre disponível",
+      body: "Mais de 45 profissionais em escala: qualquer falta é coberta no mesmo dia, sem deixar o paciente sozinho.",
+    },
+    {
+      chip: "✓ 365 dias",
+      title: "Presença 24 horas, todos os dias",
+      body: "Plantões diurnos, noturnos e de 24 horas, inclusive feriados e finais de semana, com escala confirmada por WhatsApp.",
+    },
+    {
+      chip: "✓ Relatório diário",
+      title: "Transparência com a família",
+      body: "Atualização diária, alinhamento com a equipe médica e canal direto com o responsável a qualquer hora do dia.",
+    },
+  ] as const,
+};
+
+export const TESTIMONIALS = {
+  tag: "// Depoimentos",
+  title: "Famílias que confiam no cuidado da AGD",
+  items: [
+    {
+      quote:
+        "Quando minha mãe foi internada, eu morava em Santo André e não conseguia ficar com ela o dia todo. A AGD colocou a enfermeira Carla no plantão noturno e, pela primeira vez em duas semanas, eu dormi tranquila. Recebia relatório toda noite — foi como se cuidassem da minha mãe como filha.",
+      name: "Mariana Alcântara",
+      role: "Filha de paciente · Santo André, ABC Paulista",
+      image: "testimonial1",
+    },
+  ] as const,
+};
+
+export const CTA = {
+  title: "Precisa de um cuidador ou enfermeiro de confiança hoje?",
+  body: "Fale com um especialista da AGD Saúde agora: montamos o melhor plantão para o seu caso, 24 horas por dia, sem compromisso e com resposta em poucos minutos.",
+  badge: { title: "Atendimento imediato 24h", text: "Resposta em até 10 minutos" },
+  primary: { label: "Falar no WhatsApp agora", href: CONTACT.whatsapp },
+  secondary: { label: "Ligar agora", href: CONTACT.phoneHref },
+};
+
+export const FOOTER = {
+  phone: CONTACT.phoneLabel,
+  phoneHref: CONTACT.phoneHref,
+  email: CONTACT.email,
+  blurb:
+    "Home care e acompanhamento hospitalar em São Paulo desde 2001. Plantões 24h, equipe qualificada e cuidado humano para a sua família.",
+  columns: [
+    {
+      heading: "Navegação",
+      links: [
+        { label: "Início", href: "/" },
+        { label: "Sobre a AGD", href: "#about" },
+        { label: "Serviços", href: "#services" },
+        { label: "Depoimentos", href: "#depoimentos" },
+        { label: "Contato", href: "#contact" },
+      ],
+    },
+    {
+      heading: "Serviços",
+      links: [
+        { label: "Acompanhamento Hospitalar", href: "#services" },
+        { label: "Cuidados em Residência", href: "#services" },
+        { label: "Consultas e Exames", href: "#services" },
+        { label: "Cuidados Paliativos", href: "#services" },
+      ],
+    },
+    {
+      heading: "AGD Saúde",
+      links: [
+        { label: "WhatsApp 24h", href: CONTACT.whatsapp },
+        { label: "E-mail", href: `mailto:${CONTACT.email}` },
+        { label: "Telefone", href: CONTACT.phoneHref },
+      ],
+    },
+  ],
+  legal: {
+    copyright: "© 2023 AGD Saúde. Todos os direitos reservados.",
+    privacy: "Política de Privacidade",
+    privacyHref: "/politica-de-privacidade",
+    note: "Desenvolvido por 2swebtech",
+  },
+};
+
+/* --------------------------------------------------------------------------
+ * Sections that are part of the base template but not rendered on this page.
+ * Kept so their components stay compilable.
+ * ------------------------------------------------------------------------ */
 
 export const MARQUEE = {
   lines: ["Trusted by nearly", "5000+", "Partner's"],
@@ -42,15 +258,6 @@ export const PROMISE = {
     ],
     [{ t: "place to call home." }],
   ],
-};
-
-export const ABOUT = {
-  tag: "//  About Us",
-  title: "Not Just a Care Home— A True Place to Belong",
-  body: "We provide a safe, supportive, and nurturing environment where every resident is treated with dignity and love.",
-  bannerBody: "Our experienced caregivers, here 24/7 to ensure each individual\u2019s health.",
-  bullets: ["24/7 Care & Support", "Health & Happiness First", "Emotional Well-Being"],
-  cta: { label: "Learn More", href: "#about" },
 };
 
 export const CHOOSE = {
@@ -81,85 +288,6 @@ export const CHOOSE = {
       title: "Engaging Daily Activities",
       body: "From music and gentle exercise\u2014there\u2019s always something joyful to do.",
       image: "choose4",
-    },
-  ] as const,
-};
-
-export const SERVICES = {
-  tag: "//  Our Services",
-  title: "Supporting Every Step of the Aging Journey",
-  body: "We offer a full range of services designed to meet the evolving needs of our residents. Whether it's specialized medical care",
-  items: [
-    {
-      title: "Wellness & Activities",
-      label: "Support with ",
-      bullets: [
-        "Social, physical, and activities",
-        "Residents engaged, happy and active.",
-        "While promoting independence.",
-      ],
-      note: "This is some text inside of a div block.",
-      icon: "serviceIcon1",
-      image: "serviceImage1",
-    },
-    {
-      title: "Memory Care",
-      label: "Specialized for",
-      bullets: [
-        "Seniors living with Alzheimer\u2019s",
-        "Dementia",
-        "Other memory-related conditions",
-      ],
-      note: "This is some text inside of a div block.",
-      icon: "serviceIcon2",
-      image: "serviceImage2",
-    },
-    {
-      title: "Health monitoring",
-      label: "Support with ",
-      bullets: [
-        "Ongoing Tracking & Assessment",
-        "Personalized Care Plans",
-        "Coordination with Healthcare Providers",
-      ],
-      note: "This is some text inside of a div block.",
-      icon: "serviceIcon3",
-      image: "serviceImage3",
-    },
-    {
-      title: "Assisted Living",
-      label: "Support with ",
-      bullets: ["Support with ", "Dressing, and mobility", "While promoting independence."],
-      note: "This is some text inside of a div block.",
-      icon: "serviceIcon4",
-      image: "serviceImage4",
-    },
-  ] as const,
-};
-
-export const PROCESS = {
-  tag: "//   Our Process",
-  title: "Simple Steps Toward for Better Care",
-  steps: [
-    {
-      step: "Step 1",
-      title: "Initial Consultation",
-      body: "We connect with you to understand your loved one\u2019s care needs, \npreferences, and expectations.",
-    },
-    {
-      step: "Step 2",
-      title: "Personalized Care Plan",
-      body: "Our medical and care team designs a tailored plan focusing on health, \nsafety, and daily comfort.",
-    },
-    {
-      step: "Step 3",
-      title: "Tour and Admission",
-      body: "Visit our home, meet our caregivers, and complete a simple admission \nprocess with full guidance.",
-    },
-    {
-      step: "Step 4",
-      title: "Warm Welcome & Ongoing Support",
-      body: "Move in with ease\u2014our team ensures a smooth transition, regular updates, and continuous family involvement.",
     },
   ] as const,
 };
@@ -244,57 +372,6 @@ export const TEAM = {
   ] as const,
 };
 
-export const TESTIMONIALS = {
-  tag: "//  Success Stories",
-  title: "Real Words from Those Who Matter Most",
-  items: [
-    {
-      quote:
-        "Elderhaven has been a true blessing for our family. The care and attention they provide my mother have given us peace of mind, knowing she\u2019s in capable, compassionate hands. Thank you for everything!",
-      name: "John m.",
-      role: "Son of Resident",
-      image: "testimonial1",
-    },
-    {
-      quote:
-        "Choosing Elderhaven was the best decision we made for our family. The care team not only looks after my mother\u2019s health but also brings her joy and companionship. We are deeply grateful for their genuine love and professionalism.",
-      name: "James Carter",
-      role: "Son of Resident",
-      image: "testimonial2",
-    },
-    {
-      quote:
-        "We couldn\u2019t have asked for better support than what Elderhaven provides. The staff goes above and beyond to ensure my grandmother feels comfortable and valued every single day. Their compassion shines through in everything they do.",
-      name: "Daniel Kim",
-      role: "Son of Resident",
-      image: "testimonial3",
-    },
-  ] as const,
-};
-
-export const PRINCIPLES = {
-  tag: "//   Our Principles",
-  title: "Values That Shape Every Care Moment",
-  items: [
-    {
-      title: "Compassion",
-      body: "We approach every resident with warmth and empathy, treating each individual as a valued member of our extended family. Compassion guides everything we do \u2014 from daily care",
-    },
-    {
-      title: "Respect & Dignity",
-      body: "Every person deserves to be seen, heard, and valued. We honor the unique stories, preferences, and independence of each resident, creating an environment where dignity",
-    },
-    {
-      title: " Safety & Professionalism",
-      body: "Our team follows the highest standards of care and safety, ensuring peace of mind for residents and their families. Professional training and careful attention protect",
-    },
-    {
-      title: "Listening & Understanding",
-      body: "We take the time to truly listen to residents and their families, ensuring every concern, preference, and need is fully understood and met with care.",
-    },
-  ] as const,
-};
-
 export const BLOG = {
   tag: "//  Success Stories",
   title: "Insights, Stories & Support for Families",
@@ -323,61 +400,4 @@ export const BLOG = {
       image: "miscBg",
     },
   ] as const,
-};
-
-export const CTA = {
-  title: "Ready to Learn More?",
-  body: "Submit the form below and let us help you or your loved one take the next step toward ",
-  fields: {
-    firstName: "First Name",
-    lastName: "Last Name",
-    phone: "Phone Number",
-    email: "Email Address",
-  },
-  placeholder: "Choose a service",
-  options: [
-    { label: "Assisted Living", value: "First" },
-    { label: "In-Home Care", value: "Second" },
-    { label: "Physical Therapy", value: "Third" },
-    { label: "Meal Preparation", value: "Meal" },
-    { label: "Care Assessment", value: "Assessment" },
-  ],
-  submit: "Submit",
-  success: "Thank you! Your submission has been received!",
-  error: "Oops! Something went wrong while submitting the form.",
-};
-
-export const FOOTER = {
-  phone: "+123 1234 4567",
-  email: "contactinfo@gmail.com",
-  blurb:
-    "Our team is dedicated to ensuring comfort, safety, and well-being for every resident.",
-  form: { label: "Stay Updated", cta: "Subscribe", placeholder: "Enter your email address" },
-  columns: [
-    {
-      heading: "Navigation",
-      links: [
-        { label: "Home", href: "/" },
-        { label: "About Us", href: "#about" },
-        { label: "Services", href: "#services" },
-        { label: "Contact", href: "#contact" },
-      ],
-    },
-    {
-      heading: "Navigation",
-      links: [
-        { label: "Facebook", href: "https://facebook.com" },
-        { label: "Twitter", href: "https://twitter.com" },
-        { label: "Instagram", href: "https://instagram.com" },
-        { label: "Linkedin", href: "https://linkedin.com" },
-      ],
-    },
-    {
-      heading: "Navigation",
-      links: [
-        { label: "Team", href: "#team" },
-      ],
-    },
-  ],
-  legal: { poweredBy: "Webflow", designedBy: "Pentaclay" },
 };
