@@ -1,6 +1,6 @@
 "use client";
 
-import { NAV } from "@/types/site-seniornest-webflow-io";
+import { CONTACT, NAV } from "@/types/site-seniornest-webflow-io";
 import { cn } from "@/lib/utils";
 import { useEffect, useRef, useState, type MouseEvent } from "react";
 import Link from "next/link";
@@ -15,6 +15,33 @@ function NavDot({ active }: { active?: boolean }) {
         active ? "bg-mint-green" : "bg-white/70",
       )}
     />
+  );
+}
+
+function TopBar() {
+  return (
+    <div className="hidden border-b border-white/10 bg-dark-gunmetal lg:block">
+      <div className="container flex h-[38px] items-center justify-between gap-6 text-extra-small text-light-mist">
+        <div className="flex items-center gap-6">
+          <a
+            href={CONTACT.whatsapp}
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-2 transition-colors duration-300 hover:text-white"
+          >
+            <span className="h-[6px] w-[6px] flex-none rounded-full bg-mint-green" />
+            <span>WhatsApp 24h: {CONTACT.phoneLabel}</span>
+          </a>
+          <a
+            href={`mailto:${CONTACT.email}`}
+            className="transition-colors duration-300 hover:text-white"
+          >
+            {CONTACT.email}
+          </a>
+        </div>
+        <div className="text-white/70">{CONTACT.region}</div>
+      </div>
+    </div>
   );
 }
 
@@ -37,8 +64,8 @@ export function Header() {
   }, []);
 
   const background = scrolled
-    ? "rgba(4,13,16,0.92)"
-    : "rgba(4,13,16,0)";
+    ? "rgba(11,32,70,0.94)"
+    : "rgba(11,32,70,0)";
 
   const smoothBehavior = () =>
     window.matchMedia("(prefers-reduced-motion: reduce)").matches
@@ -68,10 +95,16 @@ export function Header() {
         hidden ? "-translate-y-full" : "translate-y-0",
       )}
     >
+      <TopBar />
+
       <div className="container">
         <div className="flex h-[80px] items-center justify-between gap-10">
-          <Link href="/" className="flex h-8 w-[175px] flex-none items-center">
-            <img src={ASSETS.logoHeader} alt="SeniorNest" className="h-8 w-auto" />
+          <Link href="/" className="flex h-12 w-[210px] flex-none items-center">
+            <img
+              src={ASSETS.logoHeader}
+              alt="AGD Saúde"
+              className="h-12 w-auto"
+            />
           </Link>
 
           <nav className="hidden h-full items-center gap-2.5 lg:flex">
@@ -89,7 +122,9 @@ export function Header() {
           </nav>
 
           <div className="flex-none max-lg:hidden">
-            <Button href="#contact">Schedule a Visit</Button>
+            <Button href={CONTACT.whatsapp} ariaLabel="Falar no WhatsApp com a AGD Saúde">
+              Falar no WhatsApp
+            </Button>
           </div>
 
           <button
@@ -143,10 +178,16 @@ export function Header() {
               </a>
             ))}
 
-            <div className="pt-4">
-              <Button href="#contact" className="w-full justify-between">
-                Schedule a Visit
+            <div className="flex flex-col gap-3 pt-4">
+              <Button href={CONTACT.whatsapp} className="w-full justify-between">
+                Falar no WhatsApp
               </Button>
+              <a
+                href={CONTACT.phoneHref}
+                className="text-small text-charcoal-blue"
+              >
+                Ou ligue: {CONTACT.phoneLabel}
+              </a>
             </div>
           </nav>
         </div>

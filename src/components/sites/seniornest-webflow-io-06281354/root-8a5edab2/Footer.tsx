@@ -3,7 +3,6 @@
 import { FOOTER } from "@/types/site-seniornest-webflow-io";
 import Link from "next/link";
 import { ASSETS } from "../shared/assets";
-import { ButtonSubmit } from "../shared/Button";
 import { Reveal } from "../shared/Reveal";
 
 function FooterLink({
@@ -39,18 +38,21 @@ function FooterLink({
 
 export function Footer() {
   return (
-    <footer id="contact" className="w-full overflow-hidden pb-5 pt-[60px] max-lg:pt-[40px] max-md:pt-[30px]">
+    <footer className="w-full overflow-hidden bg-dark-gunmetal pb-5 pt-[60px] max-lg:pt-[40px] max-md:pt-[30px]">
       <div className="container">
-        <Reveal className="grid grid-cols-2 items-center gap-4 border-b border-platinum pb-[60px] max-lg:pb-[40px] max-md:grid-cols-1 max-md:pb-[30px]">
-          <Link href="/" className="block h-10 w-[208px] max-md:h-8 max-md:w-[184px] max-sm:h-[25px] max-sm:w-[140px]">
+        <Reveal className="grid grid-cols-2 items-center gap-4 border-b border-white/15 pb-[60px] max-lg:pb-[40px] max-md:grid-cols-1 max-md:pb-[30px]">
+          <Link
+            href="/"
+            className="block h-16 w-[320px] max-md:h-14 max-md:w-[280px] max-sm:h-12 max-sm:w-[240px]"
+          >
             <img
-              src={ASSETS.logoFooter}
-              alt="SeniorNest"
-              className="h-full w-full object-contain"
+              src={ASSETS.logoHeader}
+              alt="AGD Saúde"
+              className="h-full w-auto"
             />
           </Link>
           <div className="flex flex-col gap-1">
-            <a href={`tel:${FOOTER.phone.replace(/\s/g, "")}`} className="home-footer-contact-text">
+            <a href={FOOTER.phoneHref} className="home-footer-contact-text">
               <div className="h5">{FOOTER.phone}</div>
             </a>
             <a href={`mailto:${FOOTER.email}`} className="home-footer-contact-text">
@@ -61,37 +63,7 @@ export function Footer() {
 
         <div className="mt-10 grid grid-cols-[1fr_1.31fr] gap-[108px] max-lg:mt-8 max-lg:grid-cols-1 max-lg:gap-10 max-md:mt-6 max-sm:gap-[30px]">
           <Reveal variant="sm">
-            <div>
-              <div className="home-footer-text">{FOOTER.blurb}</div>
-              <div className="text-small home-footer-form-title">
-                {FOOTER.form.label}
-              </div>
-              <form
-                className="relative flex items-center gap-3 max-sm:flex-col"
-                onSubmit={(event) => event.preventDefault()}
-              >
-                <div className="relative w-full min-w-[286px] max-lg:min-w-[520px] max-md:min-w-[280px] max-sm:min-w-0">
-                  <input
-                    className="home-text-field"
-                    type="email"
-                    name="email"
-                    maxLength={256}
-                    placeholder={FOOTER.form.placeholder}
-                    required
-                  />
-                  <img
-                    src={ASSETS.mail}
-                    alt=""
-                    className="pointer-events-none absolute left-[30px] top-1/2 h-4 w-4 -translate-x-1/2 -translate-y-1/2"
-                  />
-                </div>
-                <div className="w-full min-w-[148px] max-lg:w-auto">
-                  <ButtonSubmit className="w-full min-w-[148px] max-sm:w-full">
-                    {FOOTER.form.cta}
-                  </ButtonSubmit>
-                </div>
-              </form>
-            </div>
+            <div className="home-footer-text">{FOOTER.blurb}</div>
           </Reveal>
 
           <div className="grid grid-cols-3 gap-4 max-lg:grid-cols-[1fr_1fr_2fr] max-md:grid-cols-[1fr_1fr_1.4fr] max-sm:grid-cols-2">
@@ -103,7 +75,9 @@ export function Footer() {
                 className={index === 2 ? "max-sm:col-span-2" : undefined}
               >
                 <div>
-                  <div className="text-small semi-bold">{column.heading}</div>
+                  <div className="text-small semi-bold text-white">
+                    {column.heading}
+                  </div>
                   <div className="mt-4 flex flex-col gap-2">
                     {column.links.map((link) => (
                       <FooterLink
@@ -120,33 +94,18 @@ export function Footer() {
           </div>
         </div>
 
-        <Reveal
-          variant="sm"
-          className="mt-[60px] flex items-center justify-between gap-4 max-lg:mt-[40px] max-md:mt-[30px] max-sm:flex-col max-sm:gap-0"
-        >
-          <div className="flex items-center gap-1">
-            <div className="webflow-text-style-two">Powered by</div>
-            <a
-              href="https://webflow.com"
-              target="_blank"
-              rel="noreferrer"
-              className="webflow-text-style"
+        <div className="mt-[60px] flex flex-wrap items-center justify-between gap-x-6 gap-y-2 max-lg:mt-[40px] max-md:mt-[30px] max-sm:flex-col max-sm:items-start max-sm:gap-2">
+          <div className="webflow-text-style-two flex flex-wrap items-center gap-x-2">
+            <span>{FOOTER.legal.copyright}</span>
+            <Link
+              href={FOOTER.legal.privacyHref}
+              className="webflow-text-style-two"
             >
-              {FOOTER.legal.poweredBy}
-            </a>
+              {FOOTER.legal.privacy}
+            </Link>
           </div>
-          <div className="flex items-center gap-1">
-            <div className="webflow-text-style-two">Designed by</div>
-            <a
-              href="https://webflow.com/templates/designers/pentaclay"
-              target="_blank"
-              rel="noreferrer"
-              className="webflow-text-style"
-            >
-              {FOOTER.legal.designedBy}
-            </a>
-          </div>
-        </Reveal>
+          <div className="webflow-text-style-two">{FOOTER.legal.note}</div>
+        </div>
       </div>
     </footer>
   );

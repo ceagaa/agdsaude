@@ -16,24 +16,27 @@ export function ProcessSection() {
             </div>
 
             <div className="mt-10 flex flex-col gap-7 max-lg:mt-8 max-md:mt-6">
-              {PROCESS.steps.map((step, index) => (
+              {PROCESS.items.map((item, index) => (
                 <div
-                  key={step.title}
+                  key={item.title}
                   className={`leading-[20px] ${
-                    index < PROCESS.steps.length - 1
-                      ? "border-b border-fog-overlay pb-7"
+                    index < PROCESS.items.length - 1
+                      ? "border-b border-white/10 pb-7"
                       : ""
                   }`}
                 >
                   <div className="inline-flex">
                     <div className="mb-4 flex items-center gap-1 rounded-full bg-mint-green px-[10px] py-[5px]">
-                      <span className="h-2 w-2 rounded-full bg-dark-gunmetal" />
-                      <span className="text-extra-small text-dark-gunmetal">{step.step}</span>
+                      <span className="text-extra-small font-medium text-dark-gunmetal">
+                        {item.chip}
+                      </span>
                     </div>
                   </div>
                   <div className="flex flex-col gap-2">
-                    <div className="h5 text-white">{step.title}</div>
-                    <p className="text-small leading-[150%] whitespace-pre-line text-snow-gray">{step.body}</p>
+                    <div className="h5 text-white">{item.title}</div>
+                    <p className="text-small leading-[150%] whitespace-pre-line text-snow-gray">
+                      {item.body}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -44,24 +47,11 @@ export function ProcessSection() {
             delay={100}
             className="sticky top-[100px] h-[600px] w-full overflow-hidden rounded-[12px] max-md:h-[450px] max-sm:h-[300px]"
           >
-            <div className="relative h-full w-full overflow-hidden rounded-[12px] bg-[#e3d0b633] backdrop-blur-[10px]">
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                poster={ASSETS.processVideoPoster}
-                src={ASSETS.processVideo}
-                className="absolute inset-0 h-full w-full rounded-[12px] object-cover"
-              />
-              <div className="absolute left-1/2 top-1/2 flex h-20 w-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 p-6 backdrop-blur-[10px] max-md:h-[70px] max-md:w-[70px] max-sm:h-[60px] max-sm:w-[60px]">
-                <img
-                  src={ASSETS.pause}
-                  alt="Pause video"
-                  className="h-full w-full object-contain"
-                />
-              </div>
-            </div>
+            <img
+              src={ASSETS.choose2}
+              alt="Profissional da AGD cuidando de paciente"
+              className="h-full w-full rounded-[12px] object-cover"
+            />
           </Reveal>
         </div>
       </div>
