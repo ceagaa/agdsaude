@@ -17,20 +17,26 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Seniornest - Webflow HTML Website Template",
+  title: "Acompanhamento Hospitalar em São Paulo | 24h — AGD Saúde",
   description:
-    "Providing seniors with a safe, nurturing home environment. 24/7 care, personalized support, memory care, and engaging activities. A true place to belong.",
+    "Acompanhamento hospitalar em São Paulo com enfermeiros e auxiliares 24h. Escala em até 2 horas, relatório diário para a família e cuidado humanizado. AGD Saúde, home care desde 2001.",
+  keywords: [
+    "acompanhamento hospitalar em São Paulo",
+    "cuidador hospitalar São Paulo",
+    "enfermeiro home care SP",
+    "cuidados em residência São Paulo",
+  ],
   openGraph: {
-    title: "Seniornest - Webflow HTML Website Template",
+    title: "Acompanhamento Hospitalar em São Paulo | 24h — AGD Saúde",
     description:
-      "Providing seniors with a safe, nurturing home environment. 24/7 care, personalized support, memory care, and engaging activities. A true place to belong.",
+      "Assistência humanizada 24/7 em hospitais e clínicas de São Paulo e da Grande SP, com relatório diário para a família.",
+    locale: "pt_BR",
+    type: "website",
   },
   icons: {
-    icon: "/sites/seniornest-webflow-io-06281354/root-8a5edab2/images/logo-mark.svg",
-    shortcut:
-      "/sites/seniornest-webflow-io-06281354/root-8a5edab2/images/logo-mark.svg",
-    apple:
-      "/sites/seniornest-webflow-io-06281354/root-8a5edab2/images/logo-alt.svg",
+    icon: "/img/logo/logo.webp",
+    shortcut: "/img/logo/logo.webp",
+    apple: "/img/logo/logo.webp",
   },
 };
 
@@ -41,7 +47,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="pt-BR"
       className={`${plusJakartaSans.variable} ${geist.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>

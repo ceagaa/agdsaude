@@ -12,17 +12,18 @@
   --font-mono: var(--font-third), "Geist", ui-monospace, monospace;
   --font-heading: var(--font-sans);
 
-  /* --- seniornest.webflow.io palette (raw hex, not oklch) --- */
+  /* --- AGD Saúde palette (raw hex, not oklch) ---
+     primary/ciano #1EA0FF · navy #0B2046 · ice #E8F0FE */
   --color-white: #ffffff;
-  --color-charcoal-blue: #111319cc;
-  --color-dark-gunmetal: #040d10;
-  --color-deep-teal: #005476;
+  --color-charcoal-blue: #0b2046cc;
+  --color-dark-gunmetal: #0b2046;
+  --color-deep-teal: #1ea0ff;
   --color-light-mist: #f0f0f0;
-  --color-snow-gray: #f2f2f2;
+  --color-snow-gray: #e8f0fe;
   --color-silver-mist: #cacdce;
   --color-platinum: #e8eaea;
-  --color-mint-green: #87ffbe;
-  --color-ice-blue: #dceeff;
+  --color-mint-green: #1ea0ff;
+  --color-ice-blue: #e8f0fe;
   --color-midnight-slate: #383d4dcc;
   --color-fog-overlay: #e8eaea1a;
   --color-sidebar-ring: var(--sidebar-ring);
@@ -142,6 +143,16 @@
   html {
     @apply font-sans;
   }
+  /* default heading color lives in the base layer so Tailwind
+     utilities (text-white, text-dark-gunmetal, ...) can override it */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--dark-gunmetal);
+  }
 }
 
 /* =========================================================================
@@ -159,17 +170,17 @@
 }
 
 :root {
-  /* palette */
+  /* palette — AGD Saúde */
   --white: #ffffff;
-  --charcoal-blue: #111319cc;
-  --dark-gunmetal: #040d10;
-  --deep-teal: #005476;
+  --charcoal-blue: #0b2046cc;
+  --dark-gunmetal: #0b2046;
+  --deep-teal: #1ea0ff;
   --light-mist: #f0f0f0;
-  --snow-gray: #f2f2f2;
+  --snow-gray: #e8f0fe;
   --silver-mist: #cacdce;
   --platinum: #e8eaea;
-  --mint-green: #87ffbe;
-  --ice-blue: #dceeff;
+  --mint-green: #1ea0ff;
+  --ice-blue: #e8f0fe;
   --midnight-slate: #383d4dcc;
   --fog-overlay: #e8eaea1a;
 
@@ -321,7 +332,6 @@ p {
 .h6 {
   font-weight: 600;
   font-family: inherit;
-  color: var(--dark-gunmetal);
 }
 .h1 {
   font-size: var(--fs-h1);
@@ -437,7 +447,7 @@ p {
   line-height: var(--lh-tag);
   font-weight: 500;
   letter-spacing: -0.01em;
-  color: var(--deep-teal);
+  color: var(--dark-gunmetal);
 }
 
 /* --- blog card typography (source: .blog-title / .home-blog-item-text) --- */.category-box {
@@ -492,7 +502,7 @@ p {
   padding: 8px 8px 8px 20px;
   border-radius: var(--r-l);
   background-color: var(--deep-teal);
-  color: #fff;
+  color: var(--dark-gunmetal);
   font-size: 16px;
   line-height: 125%;
   font-weight: 600;
@@ -501,10 +511,19 @@ p {
   border: none;
   cursor: pointer;
   overflow: hidden;
+  white-space: nowrap;
+  transition: filter 0.3s;
+}
+.button:hover {
+  filter: brightness(1.06);
 }
 .button-outline {
   background-color: transparent;
   border: 1px solid #fff;
+  color: #fff;
+}
+.button-outline:hover {
+  filter: none;
 }
 .button-arrow {
   display: inline-flex;
@@ -516,23 +535,18 @@ p {
   flex: none;
 }
 
-/* --- footer (source: .home-footer-*) --- */
+/* --- footer (dark navy footer of the AGD layout) --- */
 .home-footer-text {
   width: 100%;
   max-width: 345px;
-  color: var(--dark-gunmetal);
+  color: var(--platinum);
   font-size: 16px;
   line-height: 150%;
   font-weight: 500;
   letter-spacing: -0.01em;
 }
-.home-footer-form-title {
-  margin-top: 60px;
-  margin-bottom: 12px;
-  font-weight: 600;
-}
 .home-footer-contact-text {
-  color: var(--dark-gunmetal);
+  color: #fff;
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -544,7 +558,7 @@ p {
   display: flex;
   align-items: center;
   gap: 4px;
-  color: var(--charcoal-blue);
+  color: var(--platinum);
   font-size: 16px;
   line-height: 150%;
   font-weight: 400;
@@ -587,7 +601,7 @@ p {
   opacity: 1;
 }
 .webflow-text-style-two {
-  color: var(--dark-gunmetal);
+  color: var(--silver-mist);
   font-size: 16px;
   line-height: 150%;
   font-weight: 400;
@@ -596,8 +610,8 @@ p {
   transition: color 0.5s;
 }
 .webflow-text-style {
-  border-bottom: 1px solid var(--dark-gunmetal);
-  color: var(--dark-gunmetal);
+  border-bottom: 1px solid var(--platinum);
+  color: var(--platinum);
   font-size: 16px;
   line-height: 150%;
   font-weight: 400;
@@ -607,79 +621,7 @@ p {
 }
 .webflow-text-style:hover {
   color: var(--deep-teal);
-}
-
-/* --- CTA form fields (source: .cta-text-field / .select-field) --- */
-.cta-text-field {
-  width: 100%;
-  height: 44px;
-  padding: 10px 10px 10px 0;
-  border: 1px solid transparent;
-  border-bottom-color: var(--midnight-slate);
-  background-color: transparent;
-  color: var(--light-mist);
-  font-size: 16px;
-  line-height: 150%;
-  font-weight: 400;
-  letter-spacing: -0.01em;
-  transition: border-color 0.3s;
-}
-.cta-text-field::placeholder {
-  color: var(--light-mist);
-  opacity: 1;
-}
-.cta-text-field:hover,
-.cta-text-field:focus {
-  outline: none;
-  border-bottom-color: var(--mint-green);
-}
-.select-field {
-  height: 48px;
-  padding: 10px 10px 10px 0;
-  border: 1px solid transparent;
-  border-bottom-color: var(--midnight-slate);
-  background-color: #0003;
-  color: #edf0e9;
-  font-size: 16px;
-  line-height: 160%;
-  font-weight: 400;
-  letter-spacing: 0;
-  appearance: none;
-  -webkit-appearance: none;
-  transition: border-color 0.5s ease;
-}
-.select-field:hover,
-.select-field:focus {
-  outline: none;
-  border-bottom-color: var(--mint-green);
-}
-.select-field:focus {
-  background-color: var(--dark-gunmetal);
-  color: var(--light-mist);
-}
-
-/* --- footer subscribe field (source: .home-text-field) --- */
-.home-text-field {
-  width: 100%;
-  height: 48px;
-  padding: 14px 14px 14px 42px;
-  border: 1px solid var(--silver-mist);
-  border-radius: var(--r-l);
-  background-color: transparent;
-  color: var(--dark-gunmetal);
-  font-size: 16px;
-  line-height: 150%;
-  letter-spacing: -0.01em;
-  transition: border-color 0.3s;
-}
-.home-text-field::placeholder {
-  color: var(--charcoal-blue);
-  opacity: 1;
-}
-.home-text-field:hover,
-.home-text-field:focus {
-  outline: none;
-  border-color: var(--deep-teal);
+  border-bottom-color: var(--deep-teal);
 }
 
 /* --- logo marquee (time-driven, matches the source's GSAP loop) --- */
@@ -733,24 +675,15 @@ p {
   .blog-title {
     font-size: 22px;
   }
-  .home-footer-form-title {
-    margin-top: 40px;
-  }
 }
 @media screen and (max-width: 767px) {
   .blog-title {
     font-size: 20px;
   }
-  .home-footer-form-title {
-    margin-top: 30px;
-  }
 }
 @media screen and (max-width: 479px) {
   .blog-title {
     font-size: 18px;
-  }
-  .home-footer-form-title {
-    margin-top: 30px;
   }
   .webflow-text-style-two,
   .webflow-text-style {
