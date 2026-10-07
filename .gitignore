@@ -71,3 +71,6 @@ docs/
 *.sql
 /prisma/migrations/
 /db/schemas/
+
+# Playwright MCP
+.playwright-mcp/
