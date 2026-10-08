@@ -74,3 +74,11 @@ docs/
 
 # Playwright MCP
 .playwright-mcp/
+
+# OpenNext
+.open-next
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
