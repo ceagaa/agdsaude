@@ -2,7 +2,7 @@
  * Content for the AGD Saúde landing page (route "/").
  * Copy target keyword: "Acompanhamento hospitalar em São Paulo".
  *
- * NOTE: phone / whatsapp / e-mail below are placeholders — replace
+ * NOTE: phone / whatsapp / e-mail below are placeholders, replace
  * them with the real AGD contact channels before publishing.
  */
 
@@ -48,7 +48,7 @@ export const STATS = {
 export const ABOUT = {
   tag: "// Sobre a AGD Saúde",
   title: "Cuidando de vidas em São Paulo com confiança e tradição desde 2001",
-  body: "A AGD Saúde é uma empresa de home care paulistana que há mais de 20 anos acompanha pacientes em hospitais, clínicas e residências em toda a Grande São Paulo. Nosso compromisso é preservar a dignidade, o conforto e a segurança de cada paciente — e dar tranquilidade real a quem ama.",
+  body: "A AGD Saúde é uma empresa de home care paulistana que há mais de 20 anos acompanha pacientes em hospitais, clínicas e residências em toda a Grande São Paulo. Nosso compromisso é preservar a dignidade, o conforto e a segurança de cada paciente, e dar tranquilidade real a quem ama.",
   bannerBody: "Presença de verdade, escala cumprida e cuidado humano do primeiro ao último minuto.",
   bullets: [
     "Escalas 24x7, com substituição garantida em até 2 horas",
@@ -77,7 +77,7 @@ export const SERVICES = {
     },
     {
       title: "Cuidados em Residência",
-      body: "Enfermeiros e auxiliares de enfermagem em domicílio para pós-cirúrgicos, recuperação, idosos e pacientes crônicos — com plano de cuidado em casa, administração de medicamentos, curativos, higiene, alimentação e avaliação clínica periódica.",
+      body: "Enfermeiros e auxiliares de enfermagem em domicílio para pós-cirúrgicos, recuperação, idosos e pacientes crônicos, com plano de cuidado em casa, administração de medicamentos, curativos, higiene, alimentação e avaliação clínica periódica.",
       bullets: [
         "Pós-cirúrgico e recuperação",
         "Idosos e pacientes crônicos",
@@ -88,7 +88,7 @@ export const SERVICES = {
     },
     {
       title: "Acompanhamento em Consultas e Exames",
-      body: "O acompanhamento residencial começa na porta de casa: deslocamento ida e volta, apoio na triagem, anotação das orientações médicas, exames laboratoriais e de imagem, retirada de resultados e recado completo para a família — sem fila e sem ansiedade.",
+      body: "O acompanhamento residencial começa na porta de casa: deslocamento ida e volta, apoio na triagem, anotação das orientações médicas, exames laboratoriais e de imagem, retirada de resultados e recado completo para a família, sem fila e sem ansiedade.",
       bullets: [
         "Deslocamento ida e volta",
         "Apoio em exames e consultas",
@@ -103,7 +103,7 @@ export const SERVICES = {
 export const PRINCIPLES = {
   tag: "// Procedimentos",
   title: "Todos os procedimentos que nossa equipe executa",
-  body: "Técnicas de enfermagem executadas por profissionais com registro ativo e supervisão técnica — no hospital ou na sua casa.",
+  body: "Técnicas de enfermagem executadas por profissionais com registro ativo e supervisão técnica, no hospital ou na sua casa.",
   items: [
     {
       title: "Curativos e cuidados com feridas",
@@ -173,7 +173,7 @@ export const TESTIMONIALS = {
   items: [
     {
       quote:
-        "Quando minha mãe foi internada, eu morava em Santo André e não conseguia ficar com ela o dia todo. A AGD colocou a enfermeira Carla no plantão noturno e, pela primeira vez em duas semanas, eu dormi tranquila. Recebia relatório toda noite — foi como se cuidassem da minha mãe como filha.",
+        "Quando minha mãe foi internada, eu morava em Santo André e não conseguia ficar com ela o dia todo. A AGD colocou a enfermeira Carla no plantão noturno e, pela primeira vez em duas semanas, eu dormi tranquila. Recebia relatório toda noite, foi como se cuidassem da minha mãe como filha.",
       name: "Mariana Alcântara",
       role: "Filha de paciente · Santo André, ABC Paulista",
       image: "testimonial1",
@@ -242,7 +242,7 @@ export const MARQUEE = {
 };
 
 export const PROMISE = {
-  text: "Because every senior\ndeserves not just care—but\ncompassion, respect, and a place to call home.",
+  text: "Because every senior\ndeserves not just care, but\ncompassion, respect, and a place to call home.",
   // Desktop line split produced by the source site's SplitText (masks are
   // nowrap per line; concatenated they reflow into `text` below 992px).
   masks: [
@@ -252,7 +252,7 @@ export const PROMISE = {
       { t: "deserves not just " },
     ],
     [
-      { t: "care—but" },
+      { t: "care, but" },
       { img: "promiseAvatar2" as const },
       { t: "compassion, respect, and a " },
     ],

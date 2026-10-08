@@ -4,13 +4,13 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Política de Privacidade | AGD Saúde",
   description:
-    "Política de privacidade e proteção de dados da AGD Saúde — home care e acompanhamento hospitalar em São Paulo.",
+    "Política de privacidade e proteção de dados da AGD Saúde, home care e acompanhamento hospitalar em São Paulo.",
 };
 
 const SECTIONS = [
   {
     title: "1. Controladora dos dados",
-    body: "A AGD Saúde é responsável pelo tratamento dos dados pessoais coletados neste site, em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018 — LGPD).",
+    body: "A AGD Saúde é responsável pelo tratamento dos dados pessoais coletados neste site, em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018, LGPD).",
   },
   {
     title: "2. Dados que coletamos",
@@ -34,7 +34,7 @@ const SECTIONS = [
   },
   {
     title: "7. Contato",
-    body: "Dúvidas sobre esta política ou sobre seus dados pessoais: contato@agdsaude.com.br — telefone (11) 98765-4321, atendimento 24 horas.",
+    body: "Dúvidas sobre esta política ou sobre seus dados pessoais: contato@agdsaude.com.br, telefone (11) 98765-4321, atendimento 24 horas.",
   },
 ];
 

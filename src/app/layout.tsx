@@ -17,7 +17,7 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Acompanhamento Hospitalar em São Paulo | 24h — AGD Saúde",
+  title: "Acompanhamento Hospitalar em São Paulo | 24h, AGD Saúde",
   description:
     "Acompanhamento hospitalar em São Paulo com enfermeiros e auxiliares 24h. Escala em até 2 horas, relatório diário para a família e cuidado humanizado. AGD Saúde, home care desde 2001.",
   keywords: [
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     "cuidados em residência São Paulo",
   ],
   openGraph: {
-    title: "Acompanhamento Hospitalar em São Paulo | 24h — AGD Saúde",
+    title: "Acompanhamento Hospitalar em São Paulo | 24h, AGD Saúde",
     description:
       "Assistência humanizada 24/7 em hospitais e clínicas de São Paulo e da Grande SP, com relatório diário para a família.",
     locale: "pt_BR",

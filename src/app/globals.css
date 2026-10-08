@@ -156,7 +156,7 @@
 }
 
 /* =========================================================================
-   seniornest.webflow.io — clone foundation
+   seniornest.webflow.io, clone foundation
    Breakpoints are remapped to the Webflow scale:
      base       -> desktop (> 991px)
      max-lg:    -> tablet     (<= 991px)
@@ -170,7 +170,7 @@
 }
 
 :root {
-  /* palette — AGD Saúde */
+  /* palette, AGD Saúde */
   --white: #ffffff;
   --charcoal-blue: #0b2046cc;
   --dark-gunmetal: #0b2046;
