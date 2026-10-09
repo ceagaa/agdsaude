@@ -23,6 +23,10 @@ export function AboutSection() {
               <img
                 src={ASSETS.aboutBanner}
                 alt="Cuidadora da AGD Saúde ao lado de um paciente"
+                width={2880}
+                height={966}
+                loading="lazy"
+                decoding="async"
                 className="ml-[-50px] h-full w-[calc(100%+50px)] object-cover"
               />
             </div>

@@ -49,6 +49,10 @@ export function CtaSection() {
         <img
           src={ASSETS.ctaBg}
           alt=""
+          width={2048}
+          height={1463}
+          loading="lazy"
+          decoding="async"
           className="h-full w-full object-cover"
           style={{ transform: `scale(${scale})`, transformOrigin: "center" }}
         />

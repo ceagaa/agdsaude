@@ -48,6 +48,10 @@ export function Footer() {
             <img
               src={ASSETS.logoHeader}
               alt="AGD Saúde"
+              width={453}
+              height={217}
+              loading="lazy"
+              decoding="async"
               className="h-full w-auto"
             />
           </Link>

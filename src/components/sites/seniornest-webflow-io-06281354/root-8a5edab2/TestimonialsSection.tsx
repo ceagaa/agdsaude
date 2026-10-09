@@ -25,6 +25,8 @@ export function TestimonialsSection() {
               <img
                 src={ASSETS.quote}
                 alt=""
+                loading="lazy"
+                decoding="async"
                 className="mb-2.5 h-[70px] w-[70px] max-md:h-[60px] max-md:w-[60px] max-sm:h-[50px] max-sm:w-[50px]"
               />
               <h3 className="h5 text-dark-gunmetal">{item.quote}</h3>

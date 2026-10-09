@@ -50,6 +50,10 @@ export function ProcessSection() {
             <img
               src={ASSETS.choose2}
               alt="Profissional da AGD cuidando de paciente"
+              width={853}
+              height={1024}
+              loading="lazy"
+              decoding="async"
               className="h-full w-full rounded-[12px] object-cover"
             />
           </Reveal>

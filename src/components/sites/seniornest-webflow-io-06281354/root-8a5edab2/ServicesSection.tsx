@@ -28,6 +28,10 @@ export function ServicesSection() {
                   <img
                     src={ASSETS[item.image]}
                     alt={item.title}
+                    width={760}
+                    height={512}
+                    loading="lazy"
+                    decoding="async"
                     className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover/card:scale-[1.04]"
                   />
                 </div>

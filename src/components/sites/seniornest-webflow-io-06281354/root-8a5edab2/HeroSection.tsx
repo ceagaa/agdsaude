@@ -7,7 +7,13 @@ export function HeroSection() {
   return (
     <section className="relative z-10 flex min-h-screen w-full items-end overflow-hidden pb-[80px] pt-[200px] max-lg:pb-[64px] max-lg:pt-[180px] max-md:pb-[48px] max-md:pt-[150px]">
       <div className="absolute inset-0 -z-10 overflow-hidden rounded-b-[28px]">
-        <img src={ASSETS.heroBg} alt="" className="h-full w-full object-cover" />
+        <img
+          src={ASSETS.heroBg}
+          alt=""
+          fetchPriority="high"
+          decoding="async"
+          className="h-full w-full object-cover"
+        />
         <div
           className="absolute inset-0"
           style={{
@@ -56,6 +62,9 @@ export function HeroSection() {
               <img
                 src={ASSETS.choose1}
                 alt="Enfermeira acompanhando paciente em hospital de São Paulo"
+                width={853}
+                height={1024}
+                decoding="async"
                 className="h-full w-full object-cover"
               />
             </div>

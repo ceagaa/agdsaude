@@ -103,6 +103,10 @@ export function Header() {
             <img
               src={ASSETS.logoHeader}
               alt="AGD Saúde"
+              width={453}
+              height={217}
+              fetchPriority="high"
+              decoding="async"
               className="h-12 w-auto"
             />
           </Link>
